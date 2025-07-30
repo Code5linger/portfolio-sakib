@@ -3,6 +3,7 @@ import './globals.css';
 import { Bricolage_Grotesque, Oswald } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import GrainEffect from '@/components/visualEffects/grainEffect';
+import { Cursor } from '@/components/cursor/cursor';
 
 // ---Fonts-----------------------------------------------------
 const MainFont = Bricolage_Grotesque({
@@ -15,21 +16,7 @@ const OswaldFont = Oswald({
   variable: '--font-oswald',
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={cn(MainFont.variable, OswaldFont.variable)}>
-        <GrainEffect />
-        {children}
-      </body>
-    </html>
-  );
-}
-
+// ---Metadata--------------------------------------------------
 export const metadata: Metadata = {
   title: 'Sakib Ahmed | Web & App Developer',
   description:
@@ -84,3 +71,19 @@ export const metadata: Metadata = {
     images: ['https://sakibahmed.dev/og-image.png'],
   },
 };
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={cn(MainFont.variable, OswaldFont.variable)}>
+        <GrainEffect />
+        <Cursor color="#fff" />
+        {children}
+      </body>
+    </html>
+  );
+}
