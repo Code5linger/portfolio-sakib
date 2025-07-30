@@ -3,7 +3,7 @@ import './globals.css';
 import { Bricolage_Grotesque, Oswald } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import GrainEffect from '@/components/visualEffects/grainEffect';
-import { Cursor } from '@/components/cursor/cursor';
+import Cursor from '@/components/cursor/cursor';
 
 // ---Fonts-----------------------------------------------------
 const MainFont = Bricolage_Grotesque({

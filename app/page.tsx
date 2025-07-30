@@ -1,7 +1,15 @@
+'use client';
+import WaterWaveWrapper from '@/components/visualEffects/waterWaveWrapper';
+
 export default function Home() {
   return (
-    <main className="p-32">
-      <div className="link text-white">Hover Me</div>
-    </main>
+    <WaterWaveWrapper
+      imageUrl=""
+      dropRadius="3"
+      perturbance="3"
+      resolution="2048"
+    >
+      {() => <div className="h-screen"></div>}
+    </WaterWaveWrapper>
   );
 }
