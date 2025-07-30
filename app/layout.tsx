@@ -1,16 +1,28 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { Bricolage_Grotesque, Oswald } from 'next/font/google';
+import { cn } from '@/lib/utils';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+// ---Fonts-----------------------------------------------------
+const MainFont = Bricolage_Grotesque({
   subsets: ['latin'],
+  variable: '--font-bricolage',
 });
+const OswaldFont = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={cn(MainFont.className, OswaldFont.variable)}>
+        {children}
+      </body>
+    </html>
+  );
+}
 
 export const metadata: Metadata = {
   title: 'Sakib Ahmed | Web & App Developer',
@@ -66,19 +78,3 @@ export const metadata: Metadata = {
     images: ['https://sakibahmed.dev/og-image.png'],
   },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
-}
