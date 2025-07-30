@@ -2,13 +2,18 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Bricolage_Grotesque, Oswald } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import GrainEffect from '@/components/visualEffects/grainEffect';
 
 // ---Fonts-----------------------------------------------------
 const MainFont = Bricolage_Grotesque({
   subsets: ['latin'],
   variable: '--font-bricolage',
 });
-const OswaldFont = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
+
+const OswaldFont = Oswald({
+  subsets: ['latin'],
+  variable: '--font-oswald',
+});
 
 export default function RootLayout({
   children,
@@ -17,7 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(MainFont.className, OswaldFont.variable)}>
+      <body className={cn(MainFont.variable, OswaldFont.variable)}>
+        <GrainEffect />
         {children}
       </body>
     </html>
