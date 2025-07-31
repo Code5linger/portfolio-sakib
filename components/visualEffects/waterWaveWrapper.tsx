@@ -1,5 +1,6 @@
 'use client';
 import { FC, ReactNode } from 'react';
+import dynamic from 'next/dynamic';
 // @ts-expect-error: No type definitions for 'react-water-wave'
 import WaterWave from 'react-water-wave';
 

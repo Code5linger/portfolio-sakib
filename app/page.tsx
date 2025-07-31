@@ -8,7 +8,13 @@ import Profile from '@/components/ui/profile';
 import ScrollDown from '@/components/ui/scroll-down';
 import TextArea from '@/components/ui/text-area';
 import MagnetciWrapper from '@/components/visualEffects/magnetic-wrapper';
-import WaterWaveWrapper from '@/components/visualEffects/waterWaveWrapper';
+// import WaterWaveWrapper from '@/components/visualEffects/waterWaveWrapper';
+import dynamic from 'next/dynamic';
+const WaterWaveWrapper = dynamic(
+  () => import('../components/visualEffects/waterWaveWrapper'),
+  { ssr: false }
+);
+
 import { FaArrowRight, FaUser } from 'react-icons/fa';
 
 import { GoHomeFill } from 'react-icons/go';
