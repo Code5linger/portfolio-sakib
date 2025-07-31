@@ -1,11 +1,12 @@
 'use client';
 import Button from '@/components/ui/button';
 import Card from '@/components/ui/card';
+import FancyButon from '@/components/ui/fancy-button';
 import Input from '@/components/ui/input';
 import Profile from '@/components/ui/profile';
 import TextArea from '@/components/ui/text-area';
 import WaterWaveWrapper from '@/components/visualEffects/waterWaveWrapper';
-import { FaUser } from 'react-icons/fa';
+import { FaArrowRight, FaUser } from 'react-icons/fa';
 
 import { GoHomeFill } from 'react-icons/go';
 
@@ -44,6 +45,17 @@ export default function Home() {
               <TextArea name="bio2" placeholder="Full Name" icon={<FaUser />} />
               {/* Profile */}
               <Profile />
+              {/* Fancy Button */}
+              <div className="w-[300px]">
+                <FancyButon
+                  text="Contact Us"
+                  icon={<FaArrowRight />}
+                ></FancyButon>
+              </div>
+              <FancyButon
+                text="Contact Us"
+                icon={<FaArrowRight />}
+              ></FancyButon>
             </Card>
           </div>
         </div>
