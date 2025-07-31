@@ -5,7 +5,9 @@ import FancyButon from '@/components/ui/fancy-button';
 import Input from '@/components/ui/input';
 import LiveClock from '@/components/ui/live-clock';
 import Profile from '@/components/ui/profile';
+import ScrollDown from '@/components/ui/scroll-down';
 import TextArea from '@/components/ui/text-area';
+import MagnetciWrapper from '@/components/visualEffects/magnetic-wrapper';
 import WaterWaveWrapper from '@/components/visualEffects/waterWaveWrapper';
 import { FaArrowRight, FaUser } from 'react-icons/fa';
 
@@ -47,18 +49,22 @@ export default function Home() {
               {/* Profile */}
               <Profile />
               {/* Fancy Button */}
-              <div className="w-[300px]">
+              <MagnetciWrapper className="w-[300px]">
                 <FancyButon
                   text="Contact Us"
                   icon={<FaArrowRight />}
                 ></FancyButon>
-              </div>
+              </MagnetciWrapper>
               <FancyButon
                 text="Contact Us"
                 icon={<FaArrowRight />}
               ></FancyButon>
               {/* Live Clock */}
               <LiveClock timeZone="Asia/Dhaka" />
+              {/* Scroll Down */}
+              <MagnetciWrapper className="">
+                <ScrollDown />
+              </MagnetciWrapper>
             </Card>
           </div>
         </div>
