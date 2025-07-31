@@ -3,6 +3,7 @@ import Button from '@/components/ui/button';
 import Card from '@/components/ui/card';
 import FancyButon from '@/components/ui/fancy-button';
 import Input from '@/components/ui/input';
+import LiveClock from '@/components/ui/live-clock';
 import Profile from '@/components/ui/profile';
 import TextArea from '@/components/ui/text-area';
 import WaterWaveWrapper from '@/components/visualEffects/waterWaveWrapper';
@@ -56,6 +57,8 @@ export default function Home() {
                 text="Contact Us"
                 icon={<FaArrowRight />}
               ></FancyButon>
+              {/* Live Clock */}
+              <LiveClock timeZone="Asia/Dhaka" />
             </Card>
           </div>
         </div>
